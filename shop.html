@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Empyre — Shop</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <!-- tu logo -->
+        <img id="logo-header" src="img/logo.png" alt="Empyre" />
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="shop.html" aria-current="page">Shop</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+
+      <a class="cart" href="carrito.html" aria-label="Carrito">
+        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+          <path d="M7 18c-.83 0-1.5.68-1.5 1.5S6.17 21 7 21s1.5-.68 1.5-1.5S7.83 18 7 18m10 0c-.83 0-1.5.68-1.5 1.5S16.17 21 17 21s1.5-.68 1.5-1.5S17.83 18 17 18M6.2 6l.94 2h9.94c.65 0 1.23.41 1.44 1.02l1.88 5.36a1.5 1.5 0 0 1-1.41 1.99H7a1.5 1.5 0 0 1-1.42-1l-2.2-6H1V6h5.2Z"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO BANNER SHOP (opcional: imagen) -->
+  <section class="shop-hero">
+    <div class="container hero-inner">
+      <h1 class="stroke-title">SHOP</h1>
+      <p class="hero-sub">De la calle, para la calle — encontrá tu fit.</p>
+    </div>
+  </section>
+
+  <!-- CONTENIDO: SIDEBAR + GRID -->
+  <main class="container layout">
+    <!-- SIDEBAR FILTROS -->
+    <aside class="sidebar">
+      <form class="filters" action="#" method="get">
+        <!-- Categorías -->
+        <div class="filter-block">
+          <h3>Categorías</h3>
+          <label><input type="checkbox" name="cat" value="hombre"> Hombre</label>
+          <label><input type="checkbox" name="cat" value="mujer"> Mujer</label>
+          <label><input type="checkbox" name="cat" value="unisex"> Unisex</label>
+          <label><input type="checkbox" name="cat" value="accesorios"> Accesorios</label>
+        </div>
+
+        <!-- Prendas -->
+        <div class="filter-block">
+          <h3>Prendas</h3>
+          <label><input type="checkbox" name="prd" value="remeras"> Remeras</label>
+          <label><input type="checkbox" name="prd" value="buzos"> Buzos / Hoodies</label>
+          <label><input type="checkbox" name="prd" value="pantalones"> Pantalones</label>
+          <label><input type="checkbox" name="prd" value="denim"> Denim</label>
+          <label><input type="checkbox" name="prd" value="gorras"> Gorras</label>
+        </div>
+
+        <!-- Talles -->
+        <div class="filter-block">
+          <h3>Talles</h3>
+          <div class="sizes">
+            <label><input type="checkbox" name="t" value="xs"> XS</label>
+            <label><input type="checkbox" name="t" value="s"> S</label>
+            <label><input type="checkbox" name="t" value="m"> M</label>
+            <label><input type="checkbox" name="t" value="l"> L</label>
+            <label><input type="checkbox" name="t" value="xl"> XL</label>
+          </div>
+        </div>
+
+        <!-- Colores -->
+        <div class="filter-block">
+          <h3>Color</h3>
+          <div class="colors">
+            <!-- podés cambiar los colores -->
+            <label title="Denim"><input type="checkbox" value="denim"><span style="--c:#343f51"></span></label>
+            <label title="Óxido"><input type="checkbox" value="oxido"><span style="--c:#b9571f"></span></label>
+            <label title="Blanco"><input type="checkbox" value="white"><span style="--c:#ffffff"></span></label>
+            <label title="Negro"><input type="checkbox" value="black"><span style="--c:#111111"></span></label>
+            <label title="Gris"><input type="checkbox" value="gray"><span style="--c:#aaaaaa"></span></label>
+          </div>
+        </div>
+
+        <!-- Precio -->
+        <div class="filter-block">
+          <h3>Precio</h3>
+          <div class="price">
+            <input type="number" placeholder="$ mín" min="0" />
+            <span>—</span>
+            <input type="number" placeholder="$ máx" min="0" />
+          </div>
+          <button class="btn-apply" type="submit">Aplicar filtros</button>
+        </div>
+      </form>
+    </aside>
+
+    <!-- RESULTADOS / GRILLA -->
+    <section class="results">
+      <!-- barra de orden -->
+      <div class="toolbar">
+        <div class="crumbs">Home / Shop</div>
+        <label class="sort">
+          Ordenar:
+          <select>
+            <option>Más recientes</option>
+            <option>Menor precio</option>
+            <option>Mayor precio</option>
+            <option>Más vendidos</option>
+          </select>
+        </label>
+      </div>
+
+      <!-- grilla de productos (cuadrados en blanco para tus imágenes) -->
+      <div class="grid">
+        <!-- Card producto (duplicá las que necesites) -->
+        <article class="card">
+          <div class="ph"><img src="img/mockup.png" alt="Producto Empyre 1"></div>
+          <div class="info">
+            <h4>Remera Graffiti</h4>
+            <p class="price">$39</p>
+            <button class="btn-cart">Agregar</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="ph"><img src="img/mockup1.png" alt="Producto Empyre 2"></div>
+          <div class="info">
+            <h4>Hoodie Empyre</h4>
+            <p class="price">$79</p>
+            <button class="btn-cart">Agregar</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="ph"><img src="" alt="Producto Empyre 3"></div>
+          <div class="info">
+            <h4>Denim Skate</h4>
+            <p class="price">$89</p>
+            <button class="btn-cart">Agregar</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="ph"><img src="" alt="Producto Empyre 4"></div>
+          <div class="info">
+            <h4>Gorra Corona</h4>
+            <p class="price">$29</p>
+            <button class="btn-cart">Agregar</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="ph"><img src="" alt="Producto Empyre 5"></div>
+          <div class="info">
+            <h4>Pantalón Cargo</h4>
+            <p class="price">$69</p>
+            <button class="btn-cart">Agregar</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="ph"><img src="" alt="Producto Empyre 6"></div>
+          <div class="info">
+            <h4>Remera Logo</h4>
+            <p class="price">$35</p>
+            <button class="btn-cart">Agregar</button>
+          </div>
+        </article>
+      </div>
+
+      <!-- paginación dummy -->
+      <nav class="pager" aria-label="Paginación">
+        <a href="#" class="pg prev">← Anterior</a>
+        <a href="#" class="pg current">1</a>
+        <a href="#" class="pg">2</a>
+        <a href="#" class="pg">3</a>
+        <a href="#" class="pg next">Siguiente →</a>
+      </nav>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner container">
+      <!-- tu logo footer -->
+      <img id="logo-footer" src="img/logo2.png" alt="Empyre" />
+      <div class="social">
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+        <a href="#">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
